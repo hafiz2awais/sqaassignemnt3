@@ -19,12 +19,22 @@ public class ConverterTests {
 	}
 	@Test
 	public void DegreeBoundaryTest() {
-		//Happy Path
+		//Boundary Test
 		int degree = new Random().nextInt(360); // we limit the value to degree value of 360
 		double expected = Math.toRadians(degree);
 		double actual = new ConverterClass().DegreeToRadian(degree);
 		Assert.assertEquals(expected, actual, 0.0000001);
 		
 	}
+	@Test
+	public void RadianHappyTest() {
+		//Happy Path
+		double expected = 90;
+		double radian = 1.5707963267948966;
+		double actual = new ConverterClass().RadianToDegree(radian);
+		Assert.assertEquals(expected, actual, 0.0000001);
+		
+	}
+	
 
 }
