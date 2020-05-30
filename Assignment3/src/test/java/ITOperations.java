@@ -19,5 +19,19 @@ public class ITOperations {
 		
 		Assert.assertEquals(expected, actual, 0.000001);
 	}
+	@Test
+	public void sinDegree() {
+		OperationsClass obj1 = new OperationsClass();
+		ConverterClass obj2 = new ConverterClass();
+		
+		double degree = 90;
+		double expected = 1;
+		
+		double rads = obj2.DegreeToRadian(degree);
+		double actual = obj1.sinX(rads);
+		
+		Assert.assertEquals(expected, actual, 0.000001);
+	}
+	
 
 }
